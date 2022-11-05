@@ -8,7 +8,6 @@ public class Switch : MonoBehaviour
     public NarrativeHandler narrativeHandler;
     public ActionHandler actionHandler;
     public bool nearSwitch;
-    public bool switchOn;
 
     public UnityEvent SwitchActivated;
 

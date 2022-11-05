@@ -8,33 +8,29 @@ public class NarrativeHandler : MonoBehaviour
 {
     [Header("Set Up")]
     public GameObject player;
-    public GameObject dialogPrompt; // UI to tell the player they can start a dialog sequence
     public DialogueRunner dialogSystem; // Yarn Spinner Dialogue Runner
 
     [Header("Settings")]
     public bool inTrigger; // Can the player start a dialog sequence?
     public bool inDialog; // Is the player in a dialog sequence?
     public NarrativeTrigger currentTrigger;
-
-    private bool dialogInteract;
+    public bool interact;
 
     private void Update()
     {
         if (inTrigger && !inDialog)
         {
-            if (dialogInteract || currentTrigger.automatic)
+            if (interact || currentTrigger.automatic)
             {
                 inDialog = true;
                 dialogSystem.StartDialogue(currentTrigger.node);
             }
         }
-
-        dialogPrompt.SetActive(inTrigger && !inDialog); // If the player can start a dialog sequence and is not already in one show the prompt
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        dialogInteract = context.ReadValueAsButton();
+        interact = context.ReadValueAsButton();
     }
 
     // When Player Completes a Dialogue Sequence
@@ -50,5 +46,7 @@ public class NarrativeHandler : MonoBehaviour
         {
             currentTrigger.triggerComplete = true;
         }
+
+        currentTrigger = null;
     }
 }

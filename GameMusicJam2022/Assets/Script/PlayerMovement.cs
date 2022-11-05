@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     [Header("Settings")]
+    public bool controlsOn;
     public float speed = 8f; // Movement Speed of the Player
     public float jumpForce = 10f; // How far the player can jump
 
@@ -20,14 +21,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetMovement(InputAction.CallbackContext context)
     {
-        moveDirection = context.ReadValue<Vector2>();
+        if (controlsOn)
+        {
+            moveDirection = context.ReadValue<Vector2>();
+        }
     }
 
     public void SetJump(InputAction.CallbackContext context)
     {
-        jump = context.ReadValueAsButton();
+        if (controlsOn)
+        {
+            jump = context.ReadValueAsButton();
+        }
     }
 
+    private void Start()
+    {
+        controlsOn = true;
+    }
     private void Update()
     {
         if (jump && isGrounded())
@@ -58,5 +69,12 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+
+    public void DialogStarted()
+    {
+        controlsOn = false;
+        moveDirection = Vector2.zero;
     }
 }

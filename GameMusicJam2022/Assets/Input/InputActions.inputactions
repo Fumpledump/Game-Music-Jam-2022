@@ -1,5 +1,5 @@
 {
-    "name": "Player",
+    "name": "InputActions",
     "maps": [
         {
             "name": "Main",
@@ -45,6 +45,15 @@
                     "name": "Equip",
                     "type": "Button",
                     "id": "36370097-38d1-4025-8deb-bacf56169083",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "c9c6088c-bc75-4a6e-b0ef-41a6440f2351",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -148,6 +157,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Equip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d7c9f54e-9788-45fa-b515-e60f53b8440f",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

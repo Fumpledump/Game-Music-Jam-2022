@@ -129,9 +129,11 @@ GameObject:
   - component: {fileID: 6373172240272169175}
   - component: {fileID: 6373172240272169173}
   - component: {fileID: 6373172240272169172}
+  - component: {fileID: 917181912}
+  - component: {fileID: 917181913}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +271,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  controlsOn: 0
   speed: 10
   jumpForce: 10
 --- !u!114 &6373172240272169172
@@ -329,7 +332,19 @@ MonoBehaviour:
     m_ActionId: 1c944927-f127-47d3-a57a-509e15450a41
     m_ActionName: Main/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 917181912}
+        m_TargetAssemblyTypeName: NarrativeHandler, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 25681112-5d2f-464e-9b86-7bbe972050fb
     m_ActionName: Main/Interact[/Keyboard/e]
   - m_PersistentCalls:
@@ -385,3 +400,36 @@ MonoBehaviour:
   m_DefaultActionMap: Main
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &917181912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373172240272169170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d602550106b104aa1396501cd790dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6373172240272169170}
+  dialogSystem: {fileID: 0}
+  inTrigger: 0
+  inDialog: 0
+  currentTrigger: {fileID: 0}
+  interact: 0
+--- !u!114 &917181913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373172240272169170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2aa6d3ebdb99e143b29bf3488f00474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeHandler: {fileID: 917181912}
+  currentSwitch: {fileID: 0}
+  InteractionPrompt: {fileID: 0}

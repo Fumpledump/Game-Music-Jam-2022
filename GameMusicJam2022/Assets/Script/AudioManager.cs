@@ -5,6 +5,7 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
+    public AudioMixerGroup mainMixer;
     public Sound[] sounds;
     public static AudioManager instance;
 
@@ -16,8 +17,8 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
-            return;
+            Destroy(instance);
+            instance = this;
         }
 
         DontDestroyOnLoad(gameObject);
@@ -25,6 +26,7 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
+            s.source.outputAudioMixerGroup = mainMixer;
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;

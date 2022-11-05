@@ -6,37 +6,57 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Set Up")]
-    public InputAction playerControls;
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
 
     [Header("Settings")]
-    public float speed = 8f;
-    public float jumpPower = 10f;
+    public float speed = 8f; // Movement Speed of the Player
+    public float jumpForce = 10f; // How far the player can jump
 
-
-    private bool facingRight = true;
+    private bool jump;
+    private bool facingRight = true; // Direction of the sprite
     private Vector2 moveDirection = Vector2.zero;
 
-    private void OnEnable()
+    public void SetMovement(InputAction.CallbackContext context)
     {
-        playerControls.Enable();
+        moveDirection = context.ReadValue<Vector2>();
     }
 
-    private void OnDisable()
+    public void SetJump(InputAction.CallbackContext context)
     {
-        playerControls.Disable();
+        jump = context.ReadValueAsButton();
     }
 
     private void Update()
     {
-        moveDirection = playerControls.ReadValue<Vector2>();
+        if (jump && isGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+
+        Flip();
     }
 
     private void FixedUpdate()
     {
-
         rb.velocity = new Vector2(moveDirection.x * speed, rb.velocity.y);
+    }
+
+    private void Flip()
+    {
+        if (facingRight && moveDirection.x < 0 || !facingRight && moveDirection.x > 0)
+        {
+            facingRight = !facingRight;
+
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
+
+    private bool isGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 }

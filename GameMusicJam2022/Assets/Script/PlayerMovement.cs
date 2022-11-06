@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
-        Flip();
+        //Flip();
     }
 
     private void FixedUpdate()

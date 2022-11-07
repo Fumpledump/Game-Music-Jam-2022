@@ -8,6 +8,7 @@ public class ActionHandler : MonoBehaviour
     public Switch currentSwitch;
     public GameObject InteractionPrompt;
 
+
     public void Update()
     {
         if (currentSwitch != null)

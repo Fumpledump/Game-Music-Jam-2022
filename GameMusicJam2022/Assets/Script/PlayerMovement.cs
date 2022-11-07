@@ -27,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     [Range(0, 3)]
     public float swordGlideScale;
 
-
     private bool jump;
+    private bool equip;
     private bool facingRight = true; // Direction of the sprite
     private float intialGravityScale;
     private Vector2 moveDirection = Vector2.zero;

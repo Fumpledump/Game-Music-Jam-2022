@@ -87,6 +87,7 @@ public class SwordMovement : MonoBehaviour
         return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
     }
 
+    // Colliders for Blade
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground" && swordEquipped)
@@ -104,6 +105,8 @@ public class SwordMovement : MonoBehaviour
         }
     }
 
+
+    // Colliders for Hilt
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player")
@@ -128,8 +131,8 @@ public class SwordMovement : MonoBehaviour
     {
         if (swordEquipped) // Unparent Sword and Add Physics
         {
-            this.gameObject.transform.parent = null;
             swordEquipped = false;
+            this.gameObject.transform.parent = null;
 
             // Change Sword to Ground Layer
             this.gameObject.layer = 6;
@@ -140,10 +143,14 @@ public class SwordMovement : MonoBehaviour
             swordRB.gravityScale = swordGravity;
             swordRB.drag = swordDrag;
 
+            player.GetComponent<PlayerMovement>().swordEquipped = false;
+
             OffGround.Invoke(); // Enable Player Controls Just In Case
         }
         else // Parent Sword to Player and Remove Physics
         {
+            swordEquipped = true;
+
             // Remove Rigidbody from Sword
             Destroy(this.gameObject.GetComponent<Rigidbody2D>());
 
@@ -152,8 +159,7 @@ public class SwordMovement : MonoBehaviour
 
             this.gameObject.transform.parent = player.transform; // Parent Sword to Player
             this.gameObject.transform.localPosition = new Vector3(0,0,0); // Reset Sword Position
-
-            swordEquipped = true;
+            player.GetComponent<PlayerMovement>().swordEquipped = true;
         }
     }
 

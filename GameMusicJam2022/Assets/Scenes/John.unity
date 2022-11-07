@@ -609,6 +609,30 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 513155101}
+    - target: {fileID: 6373172240272169173, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 1357163079}
+    - target: {fileID: 6373172240272169173, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
+      propertyPath: swordJumpScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373172240272169173, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
+      propertyPath: swordMoveScale
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373172240272169173, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
+      propertyPath: swordGlideScale
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373172240272169173, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
+      propertyPath: swordGravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922478971740096596, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
 --- !u!114 &438469006 stripped
@@ -2336,6 +2360,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1357163079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2005706126487733798, guid: 87c67b4456e5f184c986e9b292feb1b6, type: 3}
+  m_PrefabInstance: {fileID: 438469004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1464800404
 GameObject:
   m_ObjectHideFlags: 0

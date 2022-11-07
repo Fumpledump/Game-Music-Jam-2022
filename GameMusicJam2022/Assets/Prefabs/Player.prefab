@@ -246,11 +246,16 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  Sword: {fileID: 2005706126487733798}
   controlsOn: 0
   speed: 10
   jumpForce: 12
   glideSpeed: 1
-  moveDirection: {x: 0, y: 0}
+  swordEquipped: 0
+  swordSize: 0
+  swordMoveScale: 0.8
+  swordJumpScale: 1
+  swordGlideScale: 1.4
 --- !u!114 &6373172240272169172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.9431474
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_LocalScale.y

@@ -9,37 +9,69 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public GameObject Sword;
 
-    [Header("Settings")]
+    [Header("Movement Settings")]
     public bool controlsOn;
     public float speed = 8f; // Movement Speed of the Player
     public float jumpForce = 10f; // How far the player can jump
     public float glideSpeed;
-    public Vector2 moveDirection = Vector2.zero;
+
+    [Header("Sword Settings")]
+    public bool swordEquipped;
+    public float swordSize;
+    [Range (0,3)]
+    public float swordMoveScale;
+    [Range(0, 3)]
+    public float swordJumpScale;
+    [Range(0, 3)]
+    public float swordGlideScale;
+
 
     private bool jump;
     private bool facingRight = true; // Direction of the sprite
     private float intialGravityScale;
+    private Vector2 moveDirection = Vector2.zero;
 
     private void Start()
     {
         controlsOn = true;
+        swordEquipped = true;
         intialGravityScale = rb.gravityScale;
     }
 
     private void Update()
     {
+        swordSize = Sword.transform.localScale.x;
+
         // Jumping
         if (controlsOn && jump && isGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            if (swordEquipped)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce - (swordSize * swordJumpScale));
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
+
         }
 
         // Gliding
         if (controlsOn && jump && rb.velocity.y <= 0)
         {
             rb.gravityScale = 0;
-            rb.velocity = new Vector2(rb.velocity.x, -glideSpeed);
+
+            // If Sword Equipped then Increease Slide Speed Down
+            if (swordEquipped)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -glideSpeed - (swordSize * swordGlideScale));
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -glideSpeed);
+            }
         }
         else
         {
@@ -51,7 +83,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * speed, rb.velocity.y);
+        // Decrease Speed if Sword is Equipped
+        if (swordEquipped)
+        {
+            rb.velocity = new Vector2(moveDirection.x * (speed - (swordSize * swordMoveScale)), rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(moveDirection.x * speed, rb.velocity.y);
+        }
+
     }
 
     public void SetMovement(InputAction.CallbackContext context)

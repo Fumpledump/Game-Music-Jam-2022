@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class SwordMovement : MonoBehaviour
 {
+    public UnityEvent HitGround;
+    public UnityEvent OffGround;
     Vector3 direction = Vector3.zero;
 
     // Start is called before the first frame update
@@ -37,5 +40,23 @@ public class SwordMovement : MonoBehaviour
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
     {
         return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Ground")
+        {
+            // Turn Off Movement
+            HitGround.Invoke();
+        }
+    }
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        Debug.Log("CollisionExit");
+        if (col.gameObject.tag == "Ground")
+        {
+            // Turn On Movement
+            OffGround.Invoke();
+        }
     }
 }

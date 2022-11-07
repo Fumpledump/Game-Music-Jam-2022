@@ -14,10 +14,10 @@ public class PlayerMovement : MonoBehaviour
     public bool controlsOn;
     public float speed = 8f; // Movement Speed of the Player
     public float jumpForce = 10f; // How far the player can jump
+    public Vector2 moveDirection = Vector2.zero;
 
     private bool jump;
     private bool facingRight = true; // Direction of the sprite
-    private Vector2 moveDirection = Vector2.zero;
 
     public void SetMovement(InputAction.CallbackContext context)
     {
@@ -72,9 +72,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void DialogStarted()
+    public void EnableMovement(bool turnOn)
     {
-        controlsOn = false;
-        moveDirection = Vector2.zero;
+        if (turnOn)
+        {
+            controlsOn = true;
+        }
+        else
+        {
+            controlsOn = false;
+            moveDirection = Vector2.zero;
+        }
     }
 }

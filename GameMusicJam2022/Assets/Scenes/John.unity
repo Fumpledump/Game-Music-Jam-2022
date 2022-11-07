@@ -2813,7 +2813,7 @@ GameObject:
   - component: {fileID: 1785012204}
   m_Layer: 6
   m_Name: Tilemap-Collision
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4199,6 +4199,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 438469007}
     m_Modifications:
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 438469010}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 438469010}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 438469010}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableMovement
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableMovement
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2005706125234624283, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_Name
       value: square
@@ -5209,8 +5273,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 438469010}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: DialogStarted
-        m_Mode: 1
+        m_MethodName: EnableMovement
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

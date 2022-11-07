@@ -52,7 +52,6 @@ public class SwordMovement : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D col)
     {
-        Debug.Log("CollisionExit");
         if (col.gameObject.tag == "Ground")
         {
             // Turn On Movement

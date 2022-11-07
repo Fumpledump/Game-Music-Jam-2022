@@ -30,13 +30,13 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Jumping
-        if (jump && isGrounded())
+        if (controlsOn && jump && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
         // Gliding
-        if (jump && rb.velocity.y <= 0)
+        if (controlsOn && jump && rb.velocity.y <= 0)
         {
             rb.gravityScale = 0;
             rb.velocity = new Vector2(rb.velocity.x, -glideSpeed);
@@ -64,10 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetJump(InputAction.CallbackContext context)
     {
-        if (controlsOn)
-        {
-            jump = context.ReadValueAsButton();
-        }
+        jump = context.ReadValueAsButton();
     }
 
     private void Flip()

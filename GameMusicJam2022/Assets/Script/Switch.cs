@@ -11,13 +11,25 @@ public class Switch : MonoBehaviour
 
     public UnityEvent SwitchActivated;
 
-    public void Update()
-    {
+    private float switchCooldown = 0.5f; // Time before switch can be used again.
+    private float currentSwitchTime;
 
-        if (nearSwitch && narrativeHandler.interact)
+    private void Start()
+    {
+    }
+
+    private void Update()
+    {
+        if (currentSwitchTime > 0)
+        {
+            currentSwitchTime -= Time.deltaTime;
+        }else if (nearSwitch && narrativeHandler.interact)
         {
             SwitchActivated.Invoke();
+            currentSwitchTime = switchCooldown;
         }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)

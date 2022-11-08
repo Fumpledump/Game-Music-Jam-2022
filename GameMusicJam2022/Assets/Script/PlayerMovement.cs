@@ -36,13 +36,15 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         controlsOn = true;
-        swordEquipped = true;
         intialGravityScale = rb.gravityScale;
     }
 
     private void Update()
     {
-        swordSize = Sword.transform.localScale.x;
+        if (swordEquipped)
+        {
+            swordSize = Sword.transform.localScale.x;
+        }
 
         // Jumping
         if (controlsOn && jump && isGrounded())

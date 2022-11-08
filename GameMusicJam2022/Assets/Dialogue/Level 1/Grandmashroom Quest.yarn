@@ -1,0 +1,23 @@
+﻿title: Grandmashroom_Quest
+tags:
+---
+Grandmashroom: Mmmm could you be a good little mushroom and get me an apple?
+-> Yeah sure thing! Where can I find one?
+    Grandmashroom: Aw thank you dear let me think..
+-> Awww man do I have to Grandmashroom...
+    Grandmashroom: Don't be so selfish.
+Grandmashroom: There should be a freshly fallen apple near the west side of the village.
+Grandmashroom: I would get it myself but the terrain is quite bumby for my frail bones.
+Grandmashroom: There is also this wide chasm that is quite hard to cross.
+-> Alright I will be back soon!
+    Grandmashroom: Thank you dear.
+-> How do I cross the chasm?
+    Grandmashroom: Well you should be able to jump and glide quite far.
+    Grandmashroom: You kids are always so young and jumpy it is hard to keep up.
+    Grandmashroom: Be sure to press the "Spacebar" to jump and you can hold it to start gliding through the air!
+    -> Thank you!
+        Grandmashroom: No problem deary.
+    -> Ok I think I understand.
+        Grandmashroom: If you get stuck feel free to ask me again.
+        Grandmashroom: Although my dementia has been acting up these days...
+===

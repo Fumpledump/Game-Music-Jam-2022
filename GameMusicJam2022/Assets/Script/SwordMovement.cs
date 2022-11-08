@@ -31,7 +31,12 @@ public class SwordMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        swordEquipped = true;
+        if (transform.parent != null)
+        {
+            swordEquipped = true;
+            player.GetComponent<PlayerMovement>().swordEquipped = true;
+        }
+
         controlsOn = true;
     }
 

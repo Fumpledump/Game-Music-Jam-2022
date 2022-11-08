@@ -147,8 +147,8 @@ Transform:
   m_GameObject: {fileID: 6373172240272169170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04510367, y: 0.72324675, z: 0}
-  m_LocalScale: {x: 0.69948, y: 0.69948, z: 0.69948}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6373172239572765582}
   - {fileID: 6373172239629874209}
@@ -334,7 +334,19 @@ MonoBehaviour:
     m_ActionId: dbd804ff-0b40-4eae-bdde-4aef976b9571
     m_ActionName: Main/Shield
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 719903388009519979}
+        m_TargetAssemblyTypeName: SwordMovement, Assembly-CSharp
+        m_MethodName: SetEquip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 36370097-38d1-4025-8deb-bacf56169083
     m_ActionName: Main/Equip[/Mouse/rightButton]
   - m_PersistentCalls:
@@ -455,6 +467,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 6373172240272169168}
     m_Modifications:
     - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6373172240272169170}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: swordDrag
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: swordMass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+      propertyPath: swordGravity
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 6373172240272169173}
@@ -528,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_LocalScale.y
@@ -540,11 +568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.024344116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.015301555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
       propertyPath: m_LocalPosition.z
@@ -580,6 +608,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+--- !u!114 &719903388009519979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 719903388324022870, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
+  m_PrefabInstance: {fileID: 2001670461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005706126487733798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff8f6acdbde33c409726c52dc7c91eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2005706126487733798 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2005706125234624283, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}
@@ -611,6 +650,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.25}
   m_EdgeRadius: 0
+--- !u!70 &388953070
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005706126487733798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.037079606, y: -0.06564265}
+  m_Size: {x: 0.38273132, y: 3.0130515}
+  m_Direction: 1
 --- !u!4 &7922478971740096596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7922478970956487017, guid: 582dae1ddd345e048a74a61cd0de6162, type: 3}

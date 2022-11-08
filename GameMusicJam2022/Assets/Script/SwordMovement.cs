@@ -81,7 +81,7 @@ public class SwordMovement : MonoBehaviour
 
         direction.z = angle;
 
-        Debug.Log(mousePos);
+        //Debug.Log(mousePos);
 
         //Ta Daaa
         transform.rotation = Quaternion.Euler(direction);

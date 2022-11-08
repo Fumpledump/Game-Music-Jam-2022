@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7758944939684671569}
   - component: {fileID: 5411233044920062224}
   - component: {fileID: -1991674645418873355}
-  - component: {fileID: 1231929375087599870}
+  - component: {fileID: 5613882729865103869}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Projectile
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4179904604731968432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.31, y: -0.8, z: 0}
+  m_LocalPosition: {x: -119.21603, y: -0.8, z: 0}
   m_LocalScale: {x: 0.4128, y: 0.4128, z: 0.4128}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,24 +102,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &1231929375087599870
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &5613882729865103869
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4179904604731968432}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d660b3b13601149bf095998104ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 2

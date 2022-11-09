@@ -69,10 +69,10 @@ public class SwordMovement : MonoBehaviour
             nearSword = true;
         }
 
-        //Get the Screen positions of the object
+        // Get the World positions of the object
         Vector3 objPos = Camera.main.ScreenToWorldPoint(transform.position);
 
-        //Get the Screen position of the mouse
+        // Get the World position of the mouse
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(-Mouse.current.position.ReadValue());
         mousePos.z = 0;
 
@@ -81,9 +81,6 @@ public class SwordMovement : MonoBehaviour
 
         direction.z = angle;
 
-        //Debug.Log(mousePos);
-
-        //Ta Daaa
         transform.rotation = Quaternion.Euler(direction);
     }
 

@@ -141,6 +141,7 @@ public class SwordMovement : MonoBehaviour
             swordRB.drag = swordDrag;
 
             player.GetComponent<PlayerMovement>().swordEquipped = false;
+            blade.GetComponent<Blade>().OffGround.Invoke(); // Enable Player Controls
         }
         else // Parent Sword to Player and Remove Physics
         {

@@ -40,8 +40,6 @@ public class Blade : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground")
         {
-            
-
             // Turn On Movement
             OffGround.Invoke();
         }

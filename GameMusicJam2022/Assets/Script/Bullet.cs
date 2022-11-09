@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         this.transform.Translate(-projectileSpeed * Time.deltaTime, 0, 0);
+        Destroy(gameObject,5);
     }
     
 }

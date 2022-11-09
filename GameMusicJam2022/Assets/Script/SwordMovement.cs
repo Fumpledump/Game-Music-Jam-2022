@@ -25,6 +25,8 @@ public class SwordMovement : MonoBehaviour
     private float equipCooldown = 0.5f; // Time before you can equip the sword again.
     private float currentSwordTime;
 
+    public float knockForce;
+
     private bool equip;
     Vector3 direction = Vector3.zero;
 
@@ -97,6 +99,20 @@ public class SwordMovement : MonoBehaviour
             // Turn Off Movement
             HitGround.Invoke();
         }
+
+        if (col.gameObject.tag == "Enemy" && swordEquipped)
+        {
+            StopAllCoroutines();
+            Vector2 direction = (col.gameObject.transform.position - player.transform.position).normalized;
+            col.rigidbody.AddForce(direction * (knockForce / transform.localScale.x), ForceMode2D.Impulse);
+            StartCoroutine(Reset());
+        }
+
+        IEnumerator Reset()
+        {
+            yield return new WaitForSeconds(.15f);
+            col.rigidbody.velocity = Vector3.zero;
+        }
     }
     private void OnCollisionExit2D(Collision2D col)
     {
@@ -106,7 +122,6 @@ public class SwordMovement : MonoBehaviour
             OffGround.Invoke();
         }
     }
-
 
     // Colliders for Hilt
     private void OnTriggerEnter2D(Collider2D col)

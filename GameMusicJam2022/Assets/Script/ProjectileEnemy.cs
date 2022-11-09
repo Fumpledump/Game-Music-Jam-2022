@@ -4,20 +4,8 @@ using UnityEngine;
 
 public class ProjectileEnemy : MonoBehaviour
 {
-
-    public GameObject prefab;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //BulletMovement(projectile);
-    }
+    public GameObject bullet;
+    public float projectileSpeed;
 
     //Player is in range of enemy
     private void OnTriggerEnter2D(Collider2D col)
@@ -25,12 +13,8 @@ public class ProjectileEnemy : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             //instantiates projectile
-            Instantiate(prefab, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity);
+            Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
+            shotBullet.projectileSpeed = this.projectileSpeed;
         }
     }
-
-    //public void BulletMovement(GameObject projectile)
-    //{
-    //    projectile.transform.Translate(-projectileSpeed * Time.deltaTime, 0, 0);
-    //}
 }

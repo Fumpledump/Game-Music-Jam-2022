@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     [Header("Set Up")]
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    public GameObject Sword;
+    public GameObject Blade;
+    public Animator animator;
 
     [Header("Movement Settings")]
     public bool controlsOn;
@@ -37,18 +39,29 @@ public class PlayerMovement : MonoBehaviour
     {
         controlsOn = true;
         intialGravityScale = rb.gravityScale;
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     private void Update()
     {
+
+
+        animator.SetFloat("Speed", Mathf.Abs(moveDirection.x)); 
+
         if (swordEquipped)
         {
-            swordSize = Sword.transform.localScale.x;
+            swordSize = Blade.transform.localScale.x;
         }
 
         // Jumping
         if (controlsOn && jump && isGrounded())
         {
+            animator.SetBool("Jump", true);
+
             if (swordEquipped)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce - (swordSize * swordJumpScale));
@@ -57,12 +70,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
-
+        }else if (isGrounded())
+        {
+            animator.SetBool("Jump", false);
         }
 
         // Gliding
         if (controlsOn && jump && rb.velocity.y <= 0)
         {
+            animator.SetBool("Glide", true);
             rb.gravityScale = 0;
 
             // If Sword Equipped then Increease Slide Speed Down
@@ -77,10 +93,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Glide", false);
             rb.gravityScale = intialGravityScale;
         }
 
-        //Flip();
+        Flip();
     }
 
     private void FixedUpdate()
@@ -114,11 +131,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (facingRight && moveDirection.x < 0 || !facingRight && moveDirection.x > 0)
         {
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = facingRight;
             facingRight = !facingRight;
-
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
         }
     }
 

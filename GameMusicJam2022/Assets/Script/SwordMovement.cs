@@ -2,20 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class SwordMovement : MonoBehaviour
 {
     [Header("Set Up")]
     public GameObject player;
+    public Blade blade;
+    public Animator animator;
+    public Animator playerAnimator;
 
     [Header("Settongs")]
-    public UnityEvent HitGround;
-    public UnityEvent OffGround;
     public bool nearSword;
     public bool swordEquipped;
     public bool controlsOn;
+    public Vector3 swordOffset;
 
     [Header("Rigidbody Settings")]
     public float swordMass;
@@ -24,8 +25,6 @@ public class SwordMovement : MonoBehaviour
 
     private float equipCooldown = 0.5f; // Time before you can equip the sword again.
     private float currentSwordTime;
-
-    public float knockForce;
 
     private bool equip;
     Vector3 direction = Vector3.zero;
@@ -37,6 +36,16 @@ public class SwordMovement : MonoBehaviour
         {
             swordEquipped = true;
             player.GetComponent<PlayerMovement>().swordEquipped = true;
+        }
+
+        if (playerAnimator == null)
+        {
+            playerAnimator = player.GetComponent<Animator>();
+        }
+
+        if (animator == null)
+        {
+            animator = this.GetComponent<Animator>();
         }
 
         controlsOn = true;
@@ -91,38 +100,6 @@ public class SwordMovement : MonoBehaviour
         return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
     }
 
-    // Colliders for Blade
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Ground" && swordEquipped)
-        {
-            // Turn Off Movement
-            HitGround.Invoke();
-        }
-
-        if (col.gameObject.tag == "Enemy" && swordEquipped)
-        {
-            StopAllCoroutines();
-            Vector2 direction = (col.gameObject.transform.position - player.transform.position).normalized;
-            col.rigidbody.AddForce(direction * (knockForce / transform.localScale.x), ForceMode2D.Impulse);
-            StartCoroutine(Reset());
-        }
-
-        IEnumerator Reset()
-        {
-            yield return new WaitForSeconds(.15f);
-            col.rigidbody.velocity = Vector3.zero;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Ground")
-        {
-            // Turn On Movement
-            OffGround.Invoke();
-        }
-    }
-
     // Colliders for Hilt
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -149,10 +126,13 @@ public class SwordMovement : MonoBehaviour
         if (swordEquipped) // Unparent Sword and Add Physics
         {
             swordEquipped = false;
+            blade.swordEquipped = false;
+            animator.SetBool("SwordEquipped", false);
+            playerAnimator.SetBool("SwordEquipped", false);
             this.gameObject.transform.parent = null;
 
-            // Change Sword to Ground Layer
-            this.gameObject.layer = 6;
+            // Change Blade to Ground Layer
+            blade.gameObject.layer = 6;
 
             // Add RigidBody to Sword
             Rigidbody2D swordRB = this.gameObject.AddComponent<Rigidbody2D>();
@@ -161,21 +141,24 @@ public class SwordMovement : MonoBehaviour
             swordRB.drag = swordDrag;
 
             player.GetComponent<PlayerMovement>().swordEquipped = false;
-
-            OffGround.Invoke(); // Enable Player Controls Just In Case
         }
         else // Parent Sword to Player and Remove Physics
         {
             swordEquipped = true;
+            blade.swordEquipped = true;
+            animator.SetBool("SwordEquipped", true);
+            playerAnimator.SetBool("SwordEquipped", true);
+
 
             // Remove Rigidbody from Sword
             Destroy(this.gameObject.GetComponent<Rigidbody2D>());
 
             // Set Layer to Defaults
-            this.gameObject.layer = 0;
+            blade.gameObject.layer = 0;
 
             this.gameObject.transform.parent = player.transform; // Parent Sword to Player
-            this.gameObject.transform.localPosition = new Vector3(0,0,0); // Reset Sword Position
+            this.gameObject.transform.localPosition = swordOffset; // Reset Sword Position
+
             player.GetComponent<PlayerMovement>().swordEquipped = true;
         }
     }

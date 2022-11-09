@@ -1,0 +1,28 @@
+﻿title: SwordQuest
+tags:
+---
+Grandmashroom: Oh my...
+-> What happed Grandmashroom!
+    Grandmashroom:
+    <<jump Explanation>>
+-> Hey I got your apple.
+    Grandmashroom: This is no time for apples young shroomling!
+    Grandmashroom: Have you not noticed the village is gone!
+    -> Oh yeah...
+        Grandmashroom: Do not worry young shroomling I saw it all with my two blurry eyes!
+        <<jump Explanation>>
+    -> ...
+        Grandmashroom: Young shroomling please look around you the village you once known is now a crater!
+        <<jump Explanation>>
+===
+
+title: Explanation
+---
+Grandmashroom: A bird has came in a swooped our village away!
+Grandmashroom: Now our home is going to be used for it's nest...
+-> What do we do Grandmashroom!
+    Grandmashroom: Do not fret. Your ole Grandmashroom used to be quite the warrior!
+-> Welp all hope is lost...
+    Grandmashroom: Not yet it is young shroomling!
+Grandmashroom: Head east to obtain the weapon needed to save our village!
+===

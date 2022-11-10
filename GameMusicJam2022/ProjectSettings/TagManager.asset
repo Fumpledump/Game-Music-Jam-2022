@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Enemy
   - Sword
+  - Shooter
   layers:
   - Default
   - TransparentFX

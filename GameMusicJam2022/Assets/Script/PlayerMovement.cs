@@ -50,7 +50,8 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        animator.SetFloat("Speed", Mathf.Abs(moveDirection.x)); 
+        animator.SetFloat("Speed", Mathf.Abs(moveDirection.x));
+        animator.SetBool("Fall", !isGrounded()); 
 
         if (swordEquipped)
         {

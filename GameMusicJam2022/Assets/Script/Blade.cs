@@ -20,7 +20,7 @@ public class Blade : MonoBehaviour
             HitGround.Invoke();
         }
 
-        if (col.gameObject.tag == "Enemy" && swordEquipped)
+        if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Shooter" && swordEquipped)
         {
             StopAllCoroutines();
             Vector2 direction = (col.gameObject.transform.position - player.transform.position).normalized;

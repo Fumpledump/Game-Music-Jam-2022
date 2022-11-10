@@ -11,6 +11,8 @@ public class ProjectileEnemy : MonoBehaviour
     private float time;
     private int second;
     public int fireRate;
+    [Range (-1, 1)]
+    public int direction;
 
     private void Start()
     {
@@ -45,6 +47,7 @@ public class ProjectileEnemy : MonoBehaviour
         {
             //instantiates bullet
             Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
+            shotBullet.direction = this.direction;
             shotBullet.projectileSpeed = this.projectileSpeed;
             //resets time
             time = 0;

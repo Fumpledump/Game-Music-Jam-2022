@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public bool dead;
     public SimpleFlash damageEffect;
+    public MainMenu mainMenu;
 
     public Image[] hearts;
 
@@ -43,10 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(dead == true)
         {
-            Debug.Log(dead);
-
-            health = maxHealth;
-            dead = false;
+            mainMenu.LoadLevel(SceneManager.GetActiveScene().name);
         }
 
         if (health <= 0)
@@ -63,11 +62,10 @@ public class PlayerHealth : MonoBehaviour
             damageEffect.Flash();
             Destroy(col.gameObject);
         }
-        if (col.gameObject.tag == "Shooter")
+        if (col.gameObject.tag == "Enemy")
         {
             health--;
             damageEffect.Flash();
-            Destroy(col.gameObject);
         }
     }
 }

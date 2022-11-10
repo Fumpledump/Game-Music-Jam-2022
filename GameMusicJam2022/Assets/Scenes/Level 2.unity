@@ -32065,6 +32065,8 @@ GameObject:
   - component: {fileID: 1445017892}
   - component: {fileID: 1445017891}
   - component: {fileID: 1445017890}
+  - component: {fileID: 1445017894}
+  - component: {fileID: 1445017895}
   m_Layer: 0
   m_Name: After Sword Enemy
   m_TagString: Enemy
@@ -32148,7 +32150,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1445017893
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32201,6 +32203,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1445017894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445017888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31456ead3d09d3b459193b700eefccc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  damageEffect: {fileID: 1445017895}
+  health: 2
+  maxHealth: 2
+  dead: 0
+  untilDestroyed: 1
+  Blade: {fileID: 2005706124935560984}
+  swordIncrease: 0.5
+--- !u!114 &1445017895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445017888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f4d9c1921f3044f9aa709c9d22e37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d09d017940569d348813047c46ec19ba, type: 2}
+  duration: 0.125
 --- !u!1 &1459372457
 GameObject:
   m_ObjectHideFlags: 0
@@ -34131,7 +34167,8 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 690890582}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6810952014560157093, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
 --- !u!1 &2005706124935560984 stripped
 GameObject:
@@ -34164,6 +34201,20 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6810952014560157095, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
   m_PrefabInstance: {fileID: 501960763909677767}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6373172239739912040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373172239739912027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f4d9c1921f3044f9aa709c9d22e37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d09d017940569d348813047c46ec19ba, type: 2}
+  duration: 0.125
 --- !u!1001 &7219727445419795182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34180,6 +34231,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6373172239739912027}
     - target: {fileID: 703638488440574853, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+      propertyPath: knockForce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 703638488440574853, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
       propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6373172239739912028}
@@ -34187,6 +34242,14 @@ PrefabInstance:
       propertyPath: OffGround.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6373172239739912028}
+    - target: {fileID: 7219727445317386933, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0571
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219727445317386933, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7219727445398861971, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
       propertyPath: player
       value: 
@@ -34250,6 +34313,18 @@ PrefabInstance:
     - target: {fileID: 7219727446827187055, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
       propertyPath: m_Name
       value: Sword Together
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219727446827187055, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219727446850460618, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215539958167199222, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+      propertyPath: m_TagString
+      value: Sword
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7219727446827187048, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}

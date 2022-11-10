@@ -16,8 +16,6 @@ public class Blade : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground" && swordEquipped)
         {
-            Debug.Log("test");
-
             // Turn Off Movement
             HitGround.Invoke();
         }
@@ -27,13 +25,20 @@ public class Blade : MonoBehaviour
             StopAllCoroutines();
             Vector2 direction = (col.gameObject.transform.position - player.transform.position).normalized;
             col.rigidbody.AddForce(direction * (knockForce / transform.localScale.x), ForceMode2D.Impulse);
+
+            col.gameObject.GetComponent<EnemyHealth>().TakeDamage();
+
             StartCoroutine(Reset());
         }
 
         IEnumerator Reset()
         {
             yield return new WaitForSeconds(.15f);
-            col.rigidbody.velocity = Vector3.zero;
+
+            if (col.rigidbody != null)
+            {
+                col.rigidbody.velocity = Vector3.zero;
+            }
         }
     }
     private void OnCollisionExit2D(Collision2D col)

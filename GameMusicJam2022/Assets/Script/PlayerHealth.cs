@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     public float maxHealth;
     public bool dead;
+    public SimpleFlash damageEffect;
 
     public Image[] hearts;
 
@@ -42,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(dead == true)
         {
-            //Debug.Log(dead);
+            Debug.Log(dead);
 
             health = maxHealth;
             dead = false;
@@ -54,21 +55,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            health--;
-            //Debug.Log(health);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Projectile")
         {
             health--;
-            //Debug.Log(health);
+            damageEffect.Flash();
             Destroy(col.gameObject);
         }
     }

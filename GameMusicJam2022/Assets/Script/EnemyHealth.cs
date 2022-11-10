@@ -28,7 +28,12 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            if (!dead)
+            {
+                Die();
+
+            }
+            dead = true;
         }
     }
 

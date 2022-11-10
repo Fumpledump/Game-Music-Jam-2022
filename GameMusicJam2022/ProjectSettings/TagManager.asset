@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Projectile
   - Ground
+  - Enemy
+  - Sword
   layers:
   - Default
   - TransparentFX

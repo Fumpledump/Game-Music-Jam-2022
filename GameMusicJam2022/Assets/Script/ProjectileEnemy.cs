@@ -1,36 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class ProjectileEnemy : MonoBehaviour
 {
+    public GameObject bullet;
+    public float projectileSpeed;
+    private float time;
+    private int second;
+    public int fireRate;
 
-    public GameObject prefab;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        time = Time.time;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //BulletMovement(projectile);
+        second = (int)time;
     }
 
     //Player is in range of enemy
+
+    //Player enters trigger
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "Player")
         {
             //instantiates projectile
-            Instantiate(prefab, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity);
+            Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
+            shotBullet.projectileSpeed = this.projectileSpeed;            
+        }
+
+    }
+
+    //While Player is in trigger
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        time += Time.deltaTime;
+        second = (int)time;
+        if (second / fireRate == 1)
+        {
+            //instantiates bullet
+            Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
+            shotBullet.projectileSpeed = this.projectileSpeed;
+            //resets time
+            time = 0;
+            second = 0;
+             
         }
     }
 
-    //public void BulletMovement(GameObject projectile)
-    //{
-    //    projectile.transform.Translate(-projectileSpeed * Time.deltaTime, 0, 0);
-    //}
+    //When Player Exits Trigger
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        //Resets time
+        time = 0;
+        second = 0;
+    }
 }

@@ -1,28 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float health;
     public float maxHealth;
-    private bool dead;
+    public bool dead;
+    public SimpleFlash damageEffect;
+
+    public Image[] hearts;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(maxHealth);
+        //Debug.Log(maxHealth);
         health = maxHealth;
-        Debug.Log(health);
+        //Debug.Log(health);
         dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
+
         if(dead == true)
         {
             Debug.Log(dead);
+
+            health = maxHealth;
+            dead = false;
         }
 
         if (health <= 0)
@@ -31,21 +55,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            health--;
-            Debug.Log(health);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Projectile")
         {
             health--;
-            Debug.Log(health);
+            damageEffect.Flash();
             Destroy(col.gameObject);
         }
     }

@@ -171,9 +171,9 @@ MonoBehaviour:
   glideSpeed: 1
   swordEquipped: 0
   swordSize: 0
-  swordMoveScale: 0
-  swordJumpScale: 0
-  swordGlideScale: 0
+  swordMoveScale: 0.02
+  swordJumpScale: 0.03
+  swordGlideScale: 0.04
 --- !u!114 &6810952014560157082
 MonoBehaviour:
   m_ObjectHideFlags: 0

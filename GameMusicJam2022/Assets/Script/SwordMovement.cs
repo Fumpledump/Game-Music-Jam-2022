@@ -42,10 +42,10 @@ public class SwordMovement : MonoBehaviour
         }
 
         // Get the World positions of the object
-        Vector3 objPos = Camera.main.ScreenToWorldPoint(transform.position);
+        Vector3 objPos = transform.position;
 
         // Get the World position of the mouse
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(-Mouse.current.position.ReadValue());
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mousePos.z = 0;
 
         //Get the angle between the points
@@ -53,7 +53,12 @@ public class SwordMovement : MonoBehaviour
 
         direction.z = angle;
 
-        transform.rotation = Quaternion.Euler(direction);
+        transform.rotation = Quaternion.Euler(0, 0, direction.z + 180);
+
+        /*Vector3 localScale = transform.localScale;
+        localScale.x *= -1;
+
+        transform.localScale = localScale;*/
     }
 
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)

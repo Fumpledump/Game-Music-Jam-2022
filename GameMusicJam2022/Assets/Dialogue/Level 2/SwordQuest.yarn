@@ -2,7 +2,7 @@
 tags:
 ---
 Grandmashroom: Oh my...
--> What happed Grandmashroom!
+-> What happened Grandmashroom!
     Grandmashroom:
     <<jump Explanation>>
 -> Hey I got your apple.
@@ -18,7 +18,7 @@ Grandmashroom: Oh my...
 
 title: Explanation
 ---
-Grandmashroom: A bird has came in and swooped our village away!
+Grandmashroom: A bird came and swooped our village away!
 Grandmashroom: Now our home is going to be used for it's nest...
 -> What do we do Grandmashroom!
     Grandmashroom: Do not fret. Your ole Grandmashroom used to be quite the warrior!

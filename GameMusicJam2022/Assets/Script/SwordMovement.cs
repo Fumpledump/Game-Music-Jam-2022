@@ -54,11 +54,6 @@ public class SwordMovement : MonoBehaviour
         direction.z = angle;
 
         transform.rotation = Quaternion.Euler(0, 0, direction.z + 180);
-
-        /*Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-
-        transform.localScale = localScale;*/
     }
 
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)

@@ -11,6 +11,9 @@ public class ProjectileEnemy : MonoBehaviour
     private float time;
     private int second;
     public int fireRate;
+    public float health;
+    public float maxHealth;
+    public bool dead;
 
     private void Start()
     {

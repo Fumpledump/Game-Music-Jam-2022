@@ -14,9 +14,9 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(maxHealth);
+        //Debug.Log(maxHealth);
         health = maxHealth;
-        Debug.Log(health);
+        //Debug.Log(health);
         dead = false;
     }
 
@@ -42,7 +42,10 @@ public class PlayerHealth : MonoBehaviour
 
         if(dead == true)
         {
-            Debug.Log(dead);
+            //Debug.Log(dead);
+
+            health = maxHealth;
+            dead = false;
         }
 
         if (health <= 0)
@@ -56,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             health--;
-            Debug.Log(health);
+            //Debug.Log(health);
         }
     }
 
@@ -65,7 +68,7 @@ public class PlayerHealth : MonoBehaviour
         if (col.gameObject.tag == "Projectile")
         {
             health--;
-            Debug.Log(health);
+            //Debug.Log(health);
             Destroy(col.gameObject);
         }
     }

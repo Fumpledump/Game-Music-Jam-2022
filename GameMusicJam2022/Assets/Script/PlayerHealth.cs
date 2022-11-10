@@ -63,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
             damageEffect.Flash();
             Destroy(col.gameObject);
         }
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Shooter")
         {
             health--;
             damageEffect.Flash();

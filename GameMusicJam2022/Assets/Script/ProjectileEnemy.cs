@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -16,12 +17,14 @@ public class ProjectileEnemy : MonoBehaviour
 
     private void Start()
     {
-        time = Time.time;
+        //time = Time.time;
     }
 
     private void Update()
     {
+        time += Time.deltaTime;
         second = (int)time;
+        Debug.Log(second);
     }
 
     //Player is in range of enemy
@@ -32,8 +35,11 @@ public class ProjectileEnemy : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             //instantiates projectile
-            Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
-            shotBullet.projectileSpeed = this.projectileSpeed;            
+            Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x + direction, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
+            shotBullet.projectileSpeed = this.projectileSpeed;
+            shotBullet.direction = this.direction;
+            time = 0;
+            second = 0;
         }
 
     }
@@ -41,26 +47,33 @@ public class ProjectileEnemy : MonoBehaviour
     //While Player is in trigger
     private void OnTriggerStay2D(Collider2D col)
     {
-        time += Time.deltaTime;
-        second = (int)time;
-        if (second / fireRate == 1)
+        if (col.gameObject.tag == "Player")
         {
-            //instantiates bullet
-            Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x - 1, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
-            shotBullet.direction = this.direction;
-            shotBullet.projectileSpeed = this.projectileSpeed;
-            //resets time
-            time = 0;
-            second = 0;
-             
+            //time += Time.deltaTime;
+            if (second / fireRate == 1)
+            {
+                //instantiates bullet
+                Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x + direction, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
+                shotBullet.direction = this.direction;
+                shotBullet.projectileSpeed = this.projectileSpeed;
+                //resets time
+                time = 0;
+                second = 0;
+
+            }
         }
+            
     }
 
     //When Player Exits Trigger
     private void OnTriggerExit2D(Collider2D col)
     {
-        //Resets time
-        time = 0;
-        second = 0;
+        if (col.gameObject.tag == "Player")
+        {
+            //Resets time
+            time = 0;
+            second = 0;
+        }
+            
     }
 }

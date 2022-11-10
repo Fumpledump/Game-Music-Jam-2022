@@ -94133,6 +94133,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 26043877494193053, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6373172239739912032}
+    - target: {fileID: 26043877494193053, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
       propertyPath: mainMenu
       value: 
       objectReference: {fileID: 868595097}
@@ -94140,6 +94144,10 @@ PrefabInstance:
       propertyPath: damageEffect
       value: 
       objectReference: {fileID: 6373172239739912040}
+    - target: {fileID: 26043877494193053, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 6373172239739912028}
     - target: {fileID: 26043877494193053, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 

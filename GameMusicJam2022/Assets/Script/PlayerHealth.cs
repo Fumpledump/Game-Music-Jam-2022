@@ -11,15 +11,15 @@ public class PlayerHealth : MonoBehaviour
     public bool dead;
     public SimpleFlash damageEffect;
     public MainMenu mainMenu;
+    public Animator animator;
+    public PlayerMovement playerMovement;
 
     public Image[] hearts;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log(maxHealth);
         health = maxHealth;
-        //Debug.Log(health);
         dead = false;
     }
 
@@ -45,7 +45,9 @@ public class PlayerHealth : MonoBehaviour
 
         if(dead == true)
         {
-            mainMenu.LoadLevel(SceneManager.GetActiveScene().name);
+            animator.SetBool("Dead", true);
+            playerMovement.EnableMovement(false);
+            mainMenu.LoadLevel(SceneManager.GetActiveScene().name, 7f);
         }
 
         if (health <= 0)

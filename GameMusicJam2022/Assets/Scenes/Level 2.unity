@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 3
   speed: 3
 --- !u!61 &56787977
@@ -815,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be682efde2f81b418047939c990055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   bullet: {fileID: 4179904604731968432, guid: b1a8b87c150639a499b4e3318710b40f, type: 3}
   projectileSpeed: 5
   fireRate: 6
@@ -1100,6 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 5
   speed: 3
 --- !u!61 &196050861
@@ -2045,6 +2048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 1
   speed: 3
 --- !u!61 &388144016
@@ -84892,6 +84896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be682efde2f81b418047939c990055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   bullet: {fileID: 4179904604731968432, guid: b1a8b87c150639a499b4e3318710b40f, type: 3}
   projectileSpeed: 5
   fireRate: 6
@@ -85519,6 +85524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 1
   speed: 3
 --- !u!61 &676796125
@@ -85870,6 +85876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be682efde2f81b418047939c990055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   bullet: {fileID: 4179904604731968432, guid: b1a8b87c150639a499b4e3318710b40f, type: 3}
   projectileSpeed: 5
   fireRate: 6
@@ -86154,6 +86161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 3
   speed: 3
 --- !u!61 &694525088
@@ -86578,6 +86586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 3
   speed: 3
 --- !u!61 &715177697
@@ -87003,6 +87012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 1
   speed: 3
 --- !u!61 &813780569
@@ -87662,6 +87672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be682efde2f81b418047939c990055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   bullet: {fileID: 4179904604731968432, guid: b1a8b87c150639a499b4e3318710b40f, type: 3}
   projectileSpeed: 5
   fireRate: 3
@@ -89278,6 +89289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 9
   speed: 3
 --- !u!61 &1119265166
@@ -90285,6 +90297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 1
   speed: 3
 --- !u!61 &1322206534
@@ -90832,6 +90845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 9
   speed: 3
 --- !u!61 &1399520944
@@ -91122,6 +91136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 5
   speed: 3
 --- !u!61 &1423786638
@@ -91305,6 +91320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 9
   speed: 3
 --- !u!61 &1445017891
@@ -91837,6 +91853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 3
   speed: 3
 --- !u!61 &1501038650
@@ -92043,6 +92060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 3
   speed: 3
 --- !u!61 &1517976134
@@ -93346,6 +93364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 3
   speed: 3
 --- !u!61 &1736613884
@@ -93757,6 +93776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 3
   speed: 3
 --- !u!61 &1826957006
@@ -94340,6 +94360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be682efde2f81b418047939c990055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   bullet: {fileID: 4179904604731968432, guid: b1a8b87c150639a499b4e3318710b40f, type: 3}
   projectileSpeed: 5
   fireRate: 5
@@ -94717,6 +94738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 1
   speed: 3
 --- !u!61 &1864551717
@@ -95329,6 +95351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 5
   speed: 3
 --- !u!61 &1947709661
@@ -96375,6 +96398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e6ad1afebc0ab4dbba3f81e41f7d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   range: 1
   speed: 3
 --- !u!61 &2029202675
@@ -96758,11 +96782,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6810952014560157086, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -105.86001
+      value: -105.86
       objectReference: {fileID: 0}
     - target: {fileID: 6810952014560157086, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.34
+      value: 7.291
       objectReference: {fileID: 0}
     - target: {fileID: 6810952014560157086, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
       propertyPath: m_LocalPosition.z

@@ -42,17 +42,13 @@ public class PlayerHealth : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
-
-        if(dead == true)
-        {
-            animator.SetBool("Dead", true);
-            playerMovement.EnableMovement(false);
-            mainMenu.LoadLevel(SceneManager.GetActiveScene().name, 7f);
-        }
-
-        if (health <= 0)
+        if (health <= 0 && !dead)
         {
             dead = true;
+
+            animator.SetBool("Dead", true);
+            playerMovement.EnableMovement(false);
+            mainMenu.LoadLevel(SceneManager.GetActiveScene().name, 1.2f);
         }
     }
 

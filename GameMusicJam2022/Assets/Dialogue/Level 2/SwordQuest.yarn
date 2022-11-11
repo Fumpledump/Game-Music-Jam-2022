@@ -3,7 +3,6 @@ tags:
 ---
 Grandmashroom: Oh my...
 -> What happened Grandmashroom!
-    Grandmashroom:
     <<jump Explanation>>
 -> Hey I got your apple.
     Grandmashroom: This is no time for apples young shroomling!
@@ -12,7 +11,7 @@ Grandmashroom: Oh my...
         Grandmashroom: Do not worry young shroomling I saw it all with my two blurry eyes!
         <<jump Explanation>>
     -> ...
-        Grandmashroom: Young shroomling please look around you the village you once known is now a crater!
+        Grandmashroom: Young shroomling please look around you the village you once knew is now a crater!
         <<jump Explanation>>
 ===
 

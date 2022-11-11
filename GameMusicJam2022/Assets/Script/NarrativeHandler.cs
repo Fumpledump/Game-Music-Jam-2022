@@ -42,11 +42,13 @@ public class NarrativeHandler : MonoBehaviour
         inDialog = false;
 
         // Set Trigger to complete so it can not be reactivated
-        if (!currentTrigger.repeatable)
+        if(currentTrigger != null)
         {
-            currentTrigger.triggerComplete = true;
+            if (!currentTrigger.repeatable)
+            {
+                currentTrigger.triggerComplete = true;
+            }
+            currentTrigger = null;
         }
-
-        currentTrigger = null;
     }
 }

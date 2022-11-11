@@ -19,6 +19,16 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(LevelLoader(levelName, delay));
     }
 
+    public void LoadLevelEvent(string levelName)
+    {
+        if (pauseMenu != null)
+        {
+            pauseMenu.Resume();
+
+        }
+        StartCoroutine(LevelLoader(levelName));
+    }
+
     IEnumerator LevelLoader(string levelName, float delay = 0f)
     {
         yield return new WaitForSeconds(delay);

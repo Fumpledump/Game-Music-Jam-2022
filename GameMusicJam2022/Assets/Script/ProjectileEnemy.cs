@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class ProjectileEnemy : MonoBehaviour
@@ -24,7 +23,6 @@ public class ProjectileEnemy : MonoBehaviour
     {
         time += Time.deltaTime;
         second = (int)time;
-        Debug.Log(second);
     }
 
     //Player is in range of enemy

@@ -37,7 +37,7 @@ public class ProjectileEnemy : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-
+            animator.SetBool("Shoot", true);
 
             //instantiates projectile
             Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x + direction, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
@@ -57,7 +57,7 @@ public class ProjectileEnemy : MonoBehaviour
             //time += Time.deltaTime;
             if (second / fireRate == 1)
             {
-
+                animator.SetBool("Shoot", true);
 
                 //instantiates bullet
                 Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x + direction, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
@@ -67,6 +67,10 @@ public class ProjectileEnemy : MonoBehaviour
                 time = 0;
                 second = 0;
 
+            }
+            else
+            {
+                animator.SetBool("Shoot", false);
             }
         }
             

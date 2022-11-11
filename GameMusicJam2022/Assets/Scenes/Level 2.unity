@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 56787976}
   - component: {fileID: 56787975}
   - component: {fileID: 56787974}
+  - component: {fileID: 56787980}
   m_Layer: 0
   m_Name: Enemy at Cave Exit
   m_TagString: Enemy
@@ -538,6 +539,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &56787980
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56787972}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &59698550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -699,6 +720,7 @@ GameObject:
   - component: {fileID: 94041951}
   - component: {fileID: 94041950}
   - component: {fileID: 94041949}
+  - component: {fileID: 94041956}
   m_Layer: 0
   m_Name: Enemy Shoot Cave Platform Lower
   m_TagString: Shooter
@@ -896,6 +918,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &94041956
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94041947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &133095933
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1030,7 @@ GameObject:
   - component: {fileID: 196050860}
   - component: {fileID: 196050859}
   - component: {fileID: 196050858}
+  - component: {fileID: 196050864}
   m_Layer: 0
   m_Name: Enemy Near Mushroom Cliff
   m_TagString: Enemy
@@ -1158,6 +1201,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &196050864
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196050856}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &259814540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,6 +1975,7 @@ GameObject:
   - component: {fileID: 388144015}
   - component: {fileID: 388144014}
   - component: {fileID: 388144013}
+  - component: {fileID: 388144019}
   m_Layer: 0
   m_Name: Enemy On Platform
   m_TagString: Enemy
@@ -2082,6 +2146,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &388144019
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388144011}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &428273105
 GameObject:
   m_ObjectHideFlags: 0
@@ -28618,7 +28702,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 14
-      m_TileSpriteIndex: 46
+      m_TileSpriteIndex: 50
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54298,7 +54382,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 45
+      m_TileSpriteIndex: 49
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54308,7 +54392,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 36
+      m_TileSpriteIndex: 48
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54318,7 +54402,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 35
+      m_TileSpriteIndex: 47
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54368,7 +54452,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 12
-      m_TileSpriteIndex: 34
+      m_TileSpriteIndex: 46
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54378,7 +54462,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 24
+      m_TileSpriteIndex: 45
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54388,7 +54472,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 20
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 36
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54398,7 +54482,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 35
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54408,7 +54492,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -73548,7 +73632,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -83518,7 +83602,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 46
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -84567,14 +84651,14 @@ Tilemap:
     m_Data: {fileID: 316536608, guid: 03c4130360e42c146a32e7927264a1bb, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 1379375938, guid: 03c4130360e42c146a32e7927264a1bb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 783943659, guid: 03c4130360e42c146a32e7927264a1bb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -741304284, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 588856244, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 480581603, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2036
     m_Data: {fileID: -348839205, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
   - m_RefCount: 2
@@ -84590,7 +84674,7 @@ Tilemap:
   - m_RefCount: 9
     m_Data: {fileID: 65542777, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 773487283, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
+    m_Data: {fileID: 783943659, guid: 03c4130360e42c146a32e7927264a1bb, type: 3}
   - m_RefCount: 40
     m_Data: {fileID: 2115428728, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
   - m_RefCount: 9
@@ -84598,7 +84682,7 @@ Tilemap:
   - m_RefCount: 9
     m_Data: {fileID: -757338326, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1439903287, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
+    m_Data: {fileID: -741304284, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 1934627854, guid: 20dc300797aa54b479db920520e1f6ad, type: 3}
   - m_RefCount: 18
@@ -84618,11 +84702,11 @@ Tilemap:
   - m_RefCount: 7
     m_Data: {fileID: -1685052979, guid: 20dc300797aa54b479db920520e1f6ad, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 968981425, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
+    m_Data: {fileID: 588856244, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 629685108, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
+    m_Data: {fileID: 480581603, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -588557274, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
+    m_Data: {fileID: 773487283, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
   - m_RefCount: 73
     m_Data: {fileID: -1145007484, guid: 03c4130360e42c146a32e7927264a1bb, type: 3}
   - m_RefCount: 99
@@ -84640,17 +84724,17 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -1694401988, guid: 03c4130360e42c146a32e7927264a1bb, type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: -1439903287, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 968981425, guid: 2d116f6b5b4aafe47aa82fc7729443f3, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 629685108, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -588557274, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -1790683260, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 964358269, guid: a0c3290753fa4934994b03e2fdcc4110, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 8217
     m_Data:
@@ -84713,6 +84797,7 @@ GameObject:
   - component: {fileID: 505354872}
   - component: {fileID: 505354871}
   - component: {fileID: 505354870}
+  - component: {fileID: 505354877}
   m_Layer: 0
   m_Name: Shoot Near Rock
   m_TagString: Shooter
@@ -84910,6 +84995,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &505354877
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505354868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &527606520
 GameObject:
   m_ObjectHideFlags: 0
@@ -85344,6 +85449,7 @@ GameObject:
   - component: {fileID: 676796124}
   - component: {fileID: 676796123}
   - component: {fileID: 676796122}
+  - component: {fileID: 676796128}
   m_Layer: 0
   m_Name: Enemy Move on Platform Upper
   m_TagString: Enemy
@@ -85514,6 +85620,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &676796128
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676796120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &686706343
 GameObject:
   m_ObjectHideFlags: 0
@@ -85649,6 +85775,7 @@ GameObject:
   - component: {fileID: 687644411}
   - component: {fileID: 687644410}
   - component: {fileID: 687644409}
+  - component: {fileID: 687644416}
   m_Layer: 0
   m_Name: Enemy Shoot Cave Platform Higher
   m_TagString: Shooter
@@ -85846,6 +85973,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &687644416
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687644407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &690890580
 GameObject:
   m_ObjectHideFlags: 0
@@ -85937,6 +86084,7 @@ GameObject:
   - component: {fileID: 694525087}
   - component: {fileID: 694525086}
   - component: {fileID: 694525085}
+  - component: {fileID: 694525091}
   m_Layer: 0
   m_Name: Enemy on top of Plataue
   m_TagString: Enemy
@@ -86107,6 +86255,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &694525091
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694525083}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &695637583
 GameObject:
   m_ObjectHideFlags: 0
@@ -86340,6 +86508,7 @@ GameObject:
   - component: {fileID: 715177696}
   - component: {fileID: 715177695}
   - component: {fileID: 715177694}
+  - component: {fileID: 715177700}
   m_Layer: 0
   m_Name: Last Enemy
   m_TagString: Enemy
@@ -86510,6 +86679,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &715177700
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715177692}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &758159090
 GameObject:
   m_ObjectHideFlags: 0
@@ -86744,6 +86933,7 @@ GameObject:
   - component: {fileID: 813780568}
   - component: {fileID: 813780567}
   - component: {fileID: 813780566}
+  - component: {fileID: 813780572}
   m_Layer: 0
   m_Name: Enemy In Cave Tunnel
   m_TagString: Enemy
@@ -86914,6 +87104,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &813780572
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813780564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &818222309
 GameObject:
   m_ObjectHideFlags: 0
@@ -87357,6 +87567,7 @@ GameObject:
   - component: {fileID: 849602139}
   - component: {fileID: 849602138}
   - component: {fileID: 849602137}
+  - component: {fileID: 849602144}
   m_Layer: 0
   m_Name: Cave Shoot Enemy Cliff
   m_TagString: Shooter
@@ -87554,6 +87765,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &849602144
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849602135}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &860579123
 GameObject:
   m_ObjectHideFlags: 0
@@ -88977,6 +89208,7 @@ GameObject:
   - component: {fileID: 1119265165}
   - component: {fileID: 1119265164}
   - component: {fileID: 1119265163}
+  - component: {fileID: 1119265169}
   m_Layer: 0
   m_Name: Sword Cliff Enemy
   m_TagString: Enemy
@@ -89147,6 +89379,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1119265169
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119265161}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1126466492
 GameObject:
   m_ObjectHideFlags: 0
@@ -89963,6 +90215,7 @@ GameObject:
   - component: {fileID: 1322206533}
   - component: {fileID: 1322206532}
   - component: {fileID: 1322206531}
+  - component: {fileID: 1322206537}
   m_Layer: 0
   m_Name: Enemy Move on Platform
   m_TagString: Enemy
@@ -90133,6 +90386,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1322206537
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322206529}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1340141098
 GameObject:
   m_ObjectHideFlags: 0
@@ -90489,6 +90762,7 @@ GameObject:
   - component: {fileID: 1399520943}
   - component: {fileID: 1399520942}
   - component: {fileID: 1399520941}
+  - component: {fileID: 1399520947}
   m_Layer: 0
   m_Name: Enemy In Hole
   m_TagString: Enemy
@@ -90659,6 +90933,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1399520947
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399520939}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1409644945
 GameObject:
   m_ObjectHideFlags: 0
@@ -90758,6 +91052,7 @@ GameObject:
   - component: {fileID: 1423786637}
   - component: {fileID: 1423786636}
   - component: {fileID: 1423786635}
+  - component: {fileID: 1423786641}
   m_Layer: 0
   m_Name: Enemy Near Mushroom Hill
   m_TagString: Enemy
@@ -90928,6 +91223,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1423786641
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423786633}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1433760337 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 501960763195281558, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
@@ -90954,6 +91269,7 @@ GameObject:
   - component: {fileID: 1445017890}
   - component: {fileID: 1445017894}
   - component: {fileID: 1445017895}
+  - component: {fileID: 1445017896}
   m_Layer: 0
   m_Name: After Sword Enemy
   m_TagString: Enemy
@@ -91124,6 +91440,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: d09d017940569d348813047c46ec19ba, type: 2}
   duration: 0.125
+--- !u!95 &1445017896
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445017888}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1475249401
 GameObject:
   m_ObjectHideFlags: 0
@@ -91431,6 +91767,7 @@ GameObject:
   - component: {fileID: 1501038649}
   - component: {fileID: 1501038648}
   - component: {fileID: 1501038647}
+  - component: {fileID: 1501038653}
   m_Layer: 0
   m_Name: Enemy in Mushroom Plataue
   m_TagString: Enemy
@@ -91601,6 +91938,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1501038653
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501038645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1517976129
 GameObject:
   m_ObjectHideFlags: 0
@@ -91616,6 +91973,7 @@ GameObject:
   - component: {fileID: 1517976133}
   - component: {fileID: 1517976132}
   - component: {fileID: 1517976131}
+  - component: {fileID: 1517976137}
   m_Layer: 0
   m_Name: Enemy on Cave
   m_TagString: Enemy
@@ -91786,6 +92144,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1517976137
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517976129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1519089556
 GameObject:
   m_ObjectHideFlags: 0
@@ -92898,6 +93276,7 @@ GameObject:
   - component: {fileID: 1736613883}
   - component: {fileID: 1736613882}
   - component: {fileID: 1736613881}
+  - component: {fileID: 1736613887}
   m_Layer: 0
   m_Name: Enemy Under Rock
   m_TagString: Enemy
@@ -93068,6 +93447,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1736613887
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736613879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1764162643
 GameObject:
   m_ObjectHideFlags: 0
@@ -93288,6 +93687,7 @@ GameObject:
   - component: {fileID: 1826957005}
   - component: {fileID: 1826957004}
   - component: {fileID: 1826957003}
+  - component: {fileID: 1826957009}
   m_Layer: 0
   m_Name: Enemy On Mountain
   m_TagString: Enemy
@@ -93458,6 +93858,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1826957009
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826957001}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1838410133
 GameObject:
   m_ObjectHideFlags: 0
@@ -93874,6 +94294,7 @@ GameObject:
   - component: {fileID: 1859817164}
   - component: {fileID: 1859817171}
   - component: {fileID: 1859817170}
+  - component: {fileID: 1859817172}
   m_Layer: 0
   m_Name: Cave Shoot Enemy
   m_TagString: Shooter
@@ -94071,6 +94492,26 @@ MonoBehaviour:
   untilDestroyed: 1
   Blade: {fileID: 2005706124935560984}
   swordIncrease: 3
+--- !u!95 &1859817172
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859817163}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1862571062
 GameObject:
   m_ObjectHideFlags: 0
@@ -94206,6 +94647,7 @@ GameObject:
   - component: {fileID: 1864551716}
   - component: {fileID: 1864551715}
   - component: {fileID: 1864551714}
+  - component: {fileID: 1864551720}
   m_Layer: 0
   m_Name: Enemy In Cave Hole
   m_TagString: Enemy
@@ -94376,6 +94818,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1864551720
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864551712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1879831828
 GameObject:
   m_ObjectHideFlags: 0
@@ -94797,6 +95259,7 @@ GameObject:
   - component: {fileID: 1947709660}
   - component: {fileID: 1947709659}
   - component: {fileID: 1947709658}
+  - component: {fileID: 1947709664}
   m_Layer: 0
   m_Name: Enemy Near Mushroom
   m_TagString: Enemy
@@ -94967,6 +95430,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1947709664
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947709656}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1960013680
 GameObject:
   m_ObjectHideFlags: 0
@@ -95822,6 +96305,7 @@ GameObject:
   - component: {fileID: 2029202674}
   - component: {fileID: 2029202673}
   - component: {fileID: 2029202672}
+  - component: {fileID: 2029202678}
   m_Layer: 0
   m_Name: Enemy Move on Platform Hole
   m_TagString: Enemy
@@ -95992,6 +96476,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2029202678
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029202670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 834a212b236c32a42a678a5c84976b64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2065635003
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public Animator animator;
     public float range = 3f;
     public float speed = 1f;
 
@@ -15,6 +16,10 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         startingX = transform.position.x;
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     // Update is called once per frame

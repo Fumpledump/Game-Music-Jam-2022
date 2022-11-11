@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ProjectileEnemy : MonoBehaviour
 {
+    public Animator animator;
     public GameObject bullet;
     public float projectileSpeed;
     private float time;
@@ -17,6 +18,10 @@ public class ProjectileEnemy : MonoBehaviour
     private void Start()
     {
         //time = Time.time;
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     private void Update()
@@ -32,6 +37,8 @@ public class ProjectileEnemy : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+
+
             //instantiates projectile
             Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x + direction, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
             shotBullet.projectileSpeed = this.projectileSpeed;
@@ -50,6 +57,8 @@ public class ProjectileEnemy : MonoBehaviour
             //time += Time.deltaTime;
             if (second / fireRate == 1)
             {
+
+
                 //instantiates bullet
                 Bullet shotBullet = Instantiate(bullet, new Vector2(transform.position.x + direction, transform.position.y), Quaternion.identity).GetComponent<Bullet>();
                 shotBullet.direction = this.direction;

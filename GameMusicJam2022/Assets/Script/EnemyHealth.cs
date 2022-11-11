@@ -17,6 +17,10 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     public void TakeDamage()
@@ -30,8 +34,8 @@ public class EnemyHealth : MonoBehaviour
         {
             if (!dead)
             {
+                animator.SetTrigger("Dead");
                 Die();
-
             }
             dead = true;
         }

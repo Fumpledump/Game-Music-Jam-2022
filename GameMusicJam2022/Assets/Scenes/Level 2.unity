@@ -88109,7 +88109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2fbc207dcbc574f82e410937109979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  narrativeHandler: {fileID: 0}
+  narrativeHandler: {fileID: 1433760337}
   node: Wimble
   automatic: 0
   repeatable: 1
@@ -92425,6 +92425,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 7219727445419795183}
+        m_TargetAssemblyTypeName: SwordMovement, Assembly-CSharp
+        m_MethodName: EnableSwordControl
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onNodeComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -92446,6 +92458,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1142652258}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7219727445419795183}
+        m_TargetAssemblyTypeName: SwordMovement, Assembly-CSharp
+        m_MethodName: EnableSwordControl
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -93395,7 +93419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2fbc207dcbc574f82e410937109979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  narrativeHandler: {fileID: 0}
+  narrativeHandler: {fileID: 1433760337}
   node: UnBlockedPath
   automatic: 0
   repeatable: 1
@@ -95998,7 +96022,7 @@ PrefabInstance:
     - target: {fileID: 501960763195281558, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
       propertyPath: dialogSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1662261031}
     - target: {fileID: 501960763808269534, guid: 80700a3574c408043b249831daa1e3b9, type: 3}
       propertyPath: InteractionPrompt
       value: 
@@ -96255,3 +96279,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7219727446827187048, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+--- !u!114 &7219727445419795183 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7219727446827187053, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+  m_PrefabInstance: {fileID: 7219727445419795182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff8f6acdbde33c409726c52dc7c91eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

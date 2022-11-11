@@ -23232,7 +23232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeHandler: {fileID: 1433760337}
-  node: Fungi
+  node: Parasol
   automatic: 0
   repeatable: 1
   triggerComplete: 0

@@ -93320,6 +93320,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 703638488440574853, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
+      propertyPath: swordSurfTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 703638488440574853, guid: e163b068fa0c7a74c95f9d7723eee540, type: 3}
       propertyPath: HitGround.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6373172239739912028}

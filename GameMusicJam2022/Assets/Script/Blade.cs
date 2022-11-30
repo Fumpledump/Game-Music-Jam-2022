@@ -10,8 +10,10 @@ public class Blade : MonoBehaviour
     public GameObject player;
     public bool swordEquipped;
     public float knockForce;
+    public float swordSurfTime;
 
     private AudioManager audioManager;
+    private Coroutine swordSurfTimer;
 
     private void Start()
     {
@@ -25,8 +27,12 @@ public class Blade : MonoBehaviour
         {
             audioManager.Play("BladeHit");
 
-            // Turn Off Movement
-            HitGround.Invoke();
+            if (swordSurfTimer != null)
+            {
+                StopCoroutine(swordSurfTimer);
+            }
+
+            swordSurfTimer = StartCoroutine(SwordSurfRoutine(swordSurfTime));
         }
 
         if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Shooter" && swordEquipped)
@@ -56,6 +62,18 @@ public class Blade : MonoBehaviour
         {
             // Turn On Movement
             OffGround.Invoke();
+            if (swordSurfTimer != null)
+            {
+                StopCoroutine(swordSurfTimer);
+            }
         }
+    }
+
+    IEnumerator SwordSurfRoutine(float delay = 0f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Turn Off Movement
+        HitGround.Invoke();
     }
 }

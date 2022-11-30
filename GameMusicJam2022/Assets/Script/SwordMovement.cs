@@ -22,6 +22,8 @@ public class SwordMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ChangeSwordSurf();
+
         if (playerAnimator == null)
         {
             playerAnimator = player.GetComponent<Animator>();
@@ -66,6 +68,24 @@ public class SwordMovement : MonoBehaviour
         if (hilt.swordEquipped)
         {
             hilt.controlsOn = active;
+        }
+    }
+
+    public void ChangeSwordSurf()
+    {
+        string swordSetting = PlayerPrefs.GetString("SwordSetting");
+
+        switch (swordSetting)
+        {
+            case "Default":
+                blade.swordSurfTime = 0.2f;
+                break;
+            case "Classic":
+                blade.swordSurfTime = 0f;
+                break;
+            case "Story":
+                blade.swordSurfTime = 1f;
+                break;
         }
     }
 }

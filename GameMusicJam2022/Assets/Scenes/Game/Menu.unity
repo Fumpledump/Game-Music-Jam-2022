@@ -1205,6 +1205,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 129719604069000417, guid: ec6c2c7329319574ea6be45cc2302f03, type: 3}
+      propertyPath: sounds.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 129719604069000417, guid: ec6c2c7329319574ea6be45cc2302f03, type: 3}
+      propertyPath: sounds.Array.data[19].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd1d655f1758a564382d53c538717096, type: 3}
+    - target: {fileID: 129719604069000417, guid: ec6c2c7329319574ea6be45cc2302f03, type: 3}
+      propertyPath: sounds.Array.data[19].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129719604069000417, guid: ec6c2c7329319574ea6be45cc2302f03, type: 3}
+      propertyPath: sounds.Array.data[19].name
+      value: Steps
+      objectReference: {fileID: 0}
+    - target: {fileID: 129719604069000417, guid: ec6c2c7329319574ea6be45cc2302f03, type: 3}
+      propertyPath: sounds.Array.data[19].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129719604069000417, guid: ec6c2c7329319574ea6be45cc2302f03, type: 3}
+      propertyPath: sounds.Array.data[19].volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 129719604069000418, guid: ec6c2c7329319574ea6be45cc2302f03, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1567,6 +1591,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 2fdd39d8f9f724e439827083bbda1a70, type: 2}
   swordSettingText: {fileID: 1774342907}
   swordSetting: 
+  sword: {fileID: 0}
 --- !u!1 &1363236969
 GameObject:
   m_ObjectHideFlags: 0

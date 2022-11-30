@@ -5,6 +5,9 @@ using UnityEngine;
 public class TrackChanger : MonoBehaviour
 {
     public string track;
+    public string sound;
+    public bool soundEffect;
+    public bool complete;
 
     private AudioManager audioManager;
 
@@ -16,6 +19,18 @@ public class TrackChanger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        audioManager.ChangeTrack(track);
+        if (complete)
+        {
+            return;
+        }
+
+        if (!soundEffect)
+        {
+            audioManager.ChangeTrack(track);
+        }else
+        {
+            audioManager.Play(sound);
+            complete = true;
+        }
     }
 }

@@ -13,7 +13,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void Start()
     {
-        if (PlayerPrefs.GetString("SwordSetting") == null)
+        if (PlayerPrefs.GetString("SwordSetting") == null || PlayerPrefs.GetString("SwordSetting") == "")
         {
             PlayerPrefs.SetString("SwordSetting", "Default");
         }

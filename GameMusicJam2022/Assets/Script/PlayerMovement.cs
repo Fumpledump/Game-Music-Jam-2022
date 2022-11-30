@@ -51,10 +51,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-
-
         animator.SetFloat("Speed", Mathf.Abs(moveDirection.x));
-        animator.SetBool("Fall", !isGrounded()); 
+        animator.SetBool("Fall", !isGrounded());
+
+        if (Mathf.Abs(moveDirection.x) < 0.1f || !isGrounded())
+        {
+            audioManager.Play("Steps");
+        }
 
         if (swordEquipped)
         {

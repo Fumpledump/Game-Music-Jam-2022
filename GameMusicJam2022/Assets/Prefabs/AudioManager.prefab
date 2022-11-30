@@ -44,6 +44,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead488380248fcb40892044f6ffb6919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24300002, guid: 2fdd39d8f9f724e439827083bbda1a70, type: 2}
+  music:
+  - name: Village
+    clip: {fileID: 8300000, guid: 0b23d0caa188d7f408e924e6ba633e1c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Overworld
+    clip: {fileID: 8300000, guid: 8c958ec7d1f76e0438cf0b032c5f3092, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Cave
+    clip: {fileID: 8300000, guid: 7f12507cc0561624c841da08c4d2a073, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Tree
+    clip: {fileID: 8300000, guid: 9ff6ba4eb09dec0428853e5982215f5f, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 31ab96dccb343ff4b8636a732371a33d, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   sounds:
   - name: VineBoom
     clip: {fileID: 8300000, guid: 5a41044f362821445864a831f9e11e32, type: 3}
@@ -51,3 +83,119 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: BladeHit
+    clip: {fileID: 8300000, guid: 0e36042f233a9c74fabcef3fb9797eeb, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Inky
+    clip: {fileID: 8300000, guid: 4fc1ae865d3e63f42980292a1b220d61, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyShoot
+    clip: {fileID: 8300000, guid: 759e07a0948842541948b62208fd2e3c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDie
+    clip: {fileID: 8300000, guid: 98190e383bdd49e4db3b74d8099a9ddd, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDamaged
+    clip: {fileID: 8300000, guid: 090ae67258af0534ea846c9e50d56e68, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Grandma1
+    clip: {fileID: 8300000, guid: 0e9e844285e8a9d43ab0598fb63de74c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Grandma2
+    clip: {fileID: 8300000, guid: 599f4fef1480e024eadd1694144e9ca4, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 2cba7058a467e6d49adf9942a7ec0f60, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Nest
+    clip: {fileID: 8300000, guid: e83ddbc604346964daf132f7fe417a4f, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 9110f4f7482114a46bb19bd81997fcfa, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: f795b29d307884c4a8d60b4626bac049, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Step1
+    clip: {fileID: 8300000, guid: 40fdd5d319b2aa74790e5a639bc61861, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Step2
+    clip: {fileID: 8300000, guid: 8d069b6834b7f1e408b7bbbf4479e244, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordGet
+    clip: {fileID: 8300000, guid: bc0274a663055f041956addfe2f48c93, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordGrow
+    clip: {fileID: 8300000, guid: cbc42b313b58b8844a2d9f6dd0c37754, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bird
+    clip: {fileID: 8300000, guid: c1ea6bfcc90a63242bff451520a33bbc, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Asco
+    clip: {fileID: 8300000, guid: 49d36efc798f1ba44b4d0418cf7e6c8f, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyShoot
+    clip: {fileID: 8300000, guid: 759e07a0948842541948b62208fd2e3c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  curTrack:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  startTrack: Village

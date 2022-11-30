@@ -11,11 +11,20 @@ public class Blade : MonoBehaviour
     public bool swordEquipped;
     public float knockForce;
 
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = AudioManager.instance;
+    }
+
     // Colliders for Blade
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground" && swordEquipped)
         {
+            audioManager.Play("BladeHit");
+
             // Turn Off Movement
             HitGround.Invoke();
         }

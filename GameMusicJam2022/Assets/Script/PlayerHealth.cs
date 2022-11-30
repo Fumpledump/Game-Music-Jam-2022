@@ -16,9 +16,13 @@ public class PlayerHealth : MonoBehaviour
 
     public Image[] hearts;
 
+    private AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = AudioManager.instance;
+
         health = maxHealth;
         dead = false;
     }
@@ -46,6 +50,7 @@ public class PlayerHealth : MonoBehaviour
         {
             dead = true;
 
+            audioManager.Play("Death");
             animator.SetBool("Dead", true);
             playerMovement.EnableMovement(false);
             mainMenu.LoadLevel(SceneManager.GetActiveScene().name, 1.2f);
@@ -56,12 +61,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if (col.gameObject.tag == "Projectile")
         {
+            audioManager.Play("Hurt");
             health--;
             damageEffect.Flash();
             Destroy(col.gameObject);
         }
         if (col.gameObject.tag == "Enemy")
         {
+            audioManager.Play("Hurt");
             health--;
             damageEffect.Flash();
         }

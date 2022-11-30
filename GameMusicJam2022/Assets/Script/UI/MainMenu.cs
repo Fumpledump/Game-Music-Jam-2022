@@ -9,6 +9,13 @@ public class MainMenu : MonoBehaviour
     public Animator transition;
     public PauseMenu pauseMenu;
 
+    private AudioManager audioManager;
+
+    public void Start()
+    {
+        audioManager = AudioManager.instance;
+    }
+
     public void LoadLevel(string levelName, float delay = 0f)
     {
         if (pauseMenu != null)
@@ -16,6 +23,7 @@ public class MainMenu : MonoBehaviour
             pauseMenu.Resume();
 
         }
+
         StartCoroutine(LevelLoader(levelName, delay));
     }
 
@@ -32,6 +40,25 @@ public class MainMenu : MonoBehaviour
     IEnumerator LevelLoader(string levelName, float delay = 0f)
     {
         yield return new WaitForSeconds(delay);
+
+        Debug.Log(levelName + " was loaded");
+
+        // Change Track
+        switch (levelName)
+        {
+            case "Menu":
+                audioManager.ChangeTrack("Village");
+                break;
+            case "Level 2":
+                audioManager.ChangeTrack("Overworld");
+                break;
+            case "Level 3":
+                audioManager.ChangeTrack("Win");
+                break;
+            default:
+                audioManager.ChangeTrack("Village");
+                break;
+        }
 
         transition.SetTrigger("Start");
 

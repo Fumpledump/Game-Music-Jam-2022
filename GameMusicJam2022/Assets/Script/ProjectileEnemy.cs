@@ -15,8 +15,12 @@ public class ProjectileEnemy : MonoBehaviour
     [Range (-1, 1)]
     public int direction;
 
+    private AudioManager audioManager;
+
     private void Start()
     {
+        audioManager = AudioManager.instance;
+
         //time = Time.time;
         if (animator == null)
         {
@@ -37,6 +41,7 @@ public class ProjectileEnemy : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            audioManager.Play("EnemyShoot");
             animator.SetBool("Shoot", true);
 
             //instantiates projectile
@@ -57,6 +62,7 @@ public class ProjectileEnemy : MonoBehaviour
             //time += Time.deltaTime;
             if (second / fireRate == 1)
             {
+                audioManager.Play("EnemyShoot");
                 animator.SetBool("Shoot", true);
 
                 //instantiates bullet

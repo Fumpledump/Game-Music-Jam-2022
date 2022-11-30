@@ -15,8 +15,11 @@ public class EnemyHealth : MonoBehaviour
     public GameObject Blade;
     public float swordIncrease;
 
+    private AudioManager audioManager;
     private void Start()
     {
+        audioManager = AudioManager.instance;
+
         if (animator == null)
         {
             animator = GetComponent<Animator>();
@@ -25,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage()
     {
+        audioManager.Play("EnemyDamaged");
         damageEffect.Flash();
         health -= 1;
 
@@ -34,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
         {
             if (!dead)
             {
+                audioManager.Play("EnemyDie");
                 animator.SetTrigger("Dead");
                 Die();
             }
@@ -44,6 +49,7 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         //animator.SetBool("Dead", true);
+        audioManager.Play("SwordGrow");
         Blade.transform.localScale = new Vector3(Blade.transform.localScale.x + swordIncrease, Blade.transform.localScale.y, Blade.transform.localScale.z);
         Destroy(this.gameObject, untilDestroyed);
     }

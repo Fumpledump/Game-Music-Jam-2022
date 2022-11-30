@@ -16,12 +16,23 @@ public class NarrativeHandler : MonoBehaviour
     public NarrativeTrigger currentTrigger;
     public bool interact;
 
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = AudioManager.instance;
+    }
     private void Update()
     {
         if (inTrigger && !inDialog)
         {
             if (interact || currentTrigger.automatic)
             {
+                if (currentTrigger.greeting != null)
+                {
+                    audioManager.Play(currentTrigger.greeting);
+                }
+
                 inDialog = true;
                 dialogSystem.StartDialogue(currentTrigger.node);
             }

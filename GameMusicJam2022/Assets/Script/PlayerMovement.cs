@@ -34,9 +34,12 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true; // Direction of the sprite
     private float intialGravityScale;
     private Vector2 moveDirection = Vector2.zero;
+    private AudioManager audioManager;
 
     private void Start()
     {
+        audioManager = AudioManager.instance;
+
         controlsOn = true;
         intialGravityScale = rb.gravityScale;
 
@@ -61,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         // Jumping
         if (controlsOn && jump && isGrounded())
         {
+            audioManager.Play("Jump");
             animator.SetBool("Jump", true);
 
             if (swordEquipped)

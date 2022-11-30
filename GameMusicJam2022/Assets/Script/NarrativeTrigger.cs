@@ -10,7 +10,7 @@ public class NarrativeTrigger : MonoBehaviour
     public bool automatic;
     public bool repeatable;
     public bool triggerComplete;
-
+    public string greeting;
 
     // Checks if the Player is inside the Narrative Trigger
     private void OnTriggerEnter2D(Collider2D col)

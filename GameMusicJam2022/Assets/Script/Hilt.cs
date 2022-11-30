@@ -28,9 +28,13 @@ public class Hilt : MonoBehaviour
 
     private bool equip;
 
+    private AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = AudioManager.instance;
+
         if (pivot.transform.parent != null)
         {
             swordEquipped = true;
@@ -121,6 +125,7 @@ public class Hilt : MonoBehaviour
         }
         else // Parent Sword to Player and Remove Physics
         {
+            audioManager.Play("SwordGet");
             swordEquipped = true;
             blade.swordEquipped = true;
             animator.SetBool("SwordEquipped", true);

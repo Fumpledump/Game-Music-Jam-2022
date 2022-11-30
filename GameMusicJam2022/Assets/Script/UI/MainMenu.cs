@@ -10,10 +10,12 @@ public class MainMenu : MonoBehaviour
     public PauseMenu pauseMenu;
 
     private AudioManager audioManager;
+    private Timer timer;
 
     public void Start()
     {
         audioManager = AudioManager.instance;
+        timer = Timer.instance;
     }
 
     public void LoadLevel(string levelName, float delay = 0f)
@@ -43,16 +45,22 @@ public class MainMenu : MonoBehaviour
 
         Debug.Log(levelName + " was loaded");
 
-        // Change Track
+        // Level Set Up
         switch (levelName)
         {
             case "Menu":
+                timer.EndTimer();
+                timer.ShowTimer(false);
                 audioManager.ChangeTrack("Village");
+                break;
+            case "Level 1":
+                timer.BeginTimer();
                 break;
             case "Level 2":
                 audioManager.ChangeTrack("Overworld");
                 break;
             case "Level 3":
+                timer.EndTimer();
                 audioManager.ChangeTrack("Win");
                 break;
             default:

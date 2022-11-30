@@ -8,9 +8,13 @@ public class PauseMenu : MonoBehaviour
     public static bool GamePaused;
     public GameObject PauseMenuUI;
 
+    private Timer timer;
+
     private void Start()
     {
         GamePaused = false;
+
+        timer = Timer.instance;
     }
 
     public void Update()
@@ -29,6 +33,7 @@ public class PauseMenu : MonoBehaviour
     {
         GamePaused = false;
         PauseMenuUI.SetActive(false);
+        timer.ShowTimer(false);
         Time.timeScale = 1f;
     }
 
@@ -36,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     {
         GamePaused = true;
         PauseMenuUI.SetActive(true);
+        timer.ShowTimer(true);
         Time.timeScale = 0f;
     }
 
